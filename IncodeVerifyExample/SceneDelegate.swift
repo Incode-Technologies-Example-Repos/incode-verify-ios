@@ -19,16 +19,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let _ = (scene as? UIWindowScene) else { return }
   }
 
-  func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-    guard let url = URLContexts.first?.url else {
+  func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+    guard userActivity.activityType == NSUserActivityTypeBrowsingWeb,
+          let url = userActivity.webpageURL else {
       return
     }
     
-    // Handle URL
-    openURL(url)
+    // Handle the URL accordingly
+    handleUniversalLink(url)
   }
 
-  func openURL(_ url: URL) {
-    print(url)
+  func handleUniversalLink(_ url: URL) {
+    if url.lastPathComponent.contains("verificationResult") {
+      var parameters: [String: String] = [:]
+      URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems?.forEach({
+        parameters[$0.name] = $0.value
+      })
+
+      UserDefaults.standard.setValue(parameters, forKey: "verificationResult")
+      NotificationCenter.default.post(name: .didReceiveUniversalLink, object: nil)
+    }
   }
 }

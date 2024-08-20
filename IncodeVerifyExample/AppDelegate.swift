@@ -24,13 +24,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Use this method to select a configuration to create the new scene with.
     return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
   }
-
-  func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-    // handle the url
-    print("url")
-    return true
-  }
-
-
 }
 

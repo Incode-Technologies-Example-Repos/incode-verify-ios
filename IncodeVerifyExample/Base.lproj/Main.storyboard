@@ -229,6 +229,41 @@
             </objects>
             <point key="canvasLocation" x="493.89312977099235" y="31.690140845070424"/>
         </scene>
+        <!--Verification Result View Controller-->
+        <scene sceneID="1Vq-2h-W9J">
+            <objects>
+                <viewController id="HGX-G3-6n7" customClass="VerificationResultViewController" customModule="IncodeVerifyExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ap5-eY-BZm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="w5T-Ra-sbW">
+                                <rect key="frame" x="72.666666666666686" y="385.66666666666669" width="248" height="80.666666666666686"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="pZ9-8J-SPg">
+                                        <rect key="frame" x="0.0" y="0.0" width="248" height="45"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identity successfully verified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMB-Nj-Lyr">
+                                        <rect key="frame" x="0.0" y="58.999999999999993" width="248" height="21.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="snj-o7-mll"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="w5T-Ra-sbW" firstAttribute="centerY" secondItem="Ap5-eY-BZm" secondAttribute="centerY" id="CQW-6R-JBe"/>
+                            <constraint firstItem="w5T-Ra-sbW" firstAttribute="centerX" secondItem="Ap5-eY-BZm" secondAttribute="centerX" id="OOj-BC-Jae"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80w-0H-hqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="494" y="723"/>
+        </scene>
         <!--Web View Verification View Controller-->
         <scene sceneID="iOD-gy-AAX">
             <objects>
@@ -266,6 +301,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="success" width="45" height="45"/>
         <image name="verification_1" width="24" height="24"/>
         <image name="verification_2" width="24" height="24"/>
         <image name="verification_3" width="24" height="24"/>

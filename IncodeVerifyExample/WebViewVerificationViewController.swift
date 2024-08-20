@@ -20,8 +20,11 @@ class WebViewVerificationViewController: UIViewController {
     
     webView.navigationDelegate = self
     webView.uiDelegate = self
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(handleUniversalLink),
+                                           name: .didReceiveUniversalLink,
+                                           object: nil)
     loadRequest()
-  
   }
 
   func loadRequest() {
@@ -71,6 +74,10 @@ class WebViewVerificationViewController: UIViewController {
       }
     }
   }
+
+  @objc private func handleUniversalLink() {
+    // read the data from UserDefaults and open the result screen
+  }
 }
 
 extension WebViewVerificationViewController: WKUIDelegate, WKNavigationDelegate {
@@ -101,39 +108,9 @@ extension WebViewVerificationViewController: WKUIDelegate, WKNavigationDelegate 
   }
 }
 
-extension UIViewController {
-  func showAlert(title: String, message: String) {
-    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-    alert.addAction(UIAlertAction(title: "OK", style: .default))
-    present(alert, animated: true)
-  }
-}
-
 extension String {
 
   func decodeURL() -> String {
     return self.removingPercentEncoding ?? ""
-  }
-}
-
-extension URL {
-  func appendQueryParams(queryItems: [URLQueryItem]) -> URL? {
-    guard var urlComponents = URLComponents(url: self, resolvingAgainstBaseURL: true) else {
-      return nil
-    }
-    urlComponents.queryItems = (urlComponents.queryItems ?? []) + queryItems
-    return urlComponents.url
-  }
-
-  func checkParameterForValue(parameter: String, value: String) -> Bool {
-    guard let components = URLComponents(url: self, resolvingAgainstBaseURL: false) else {
-      return false
-    }
-
-    if let queryItems = components.queryItems {
-      return queryItems.contains { $0.name == parameter && $0.value == value }
-    }
-
-    return false
   }
 }
