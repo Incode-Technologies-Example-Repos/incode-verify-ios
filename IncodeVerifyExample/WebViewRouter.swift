@@ -1,42 +1,46 @@
 //
-//  AppDelegate.swift
+//  WebViewRouter.swift
 //  IncodeVerifyExample
 //
-//  Created by Ivan Nedeljkovic on 6.8.24..
+//  Created by David Mendez on 26/08/24.
 //
 
 import UIKit
 
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class WebViewRouter {
 
+  private(set) weak var navigationController: UINavigationController?
+  private(set) weak var keyWindow: UIWindow?
+  var copiedValue: String?
 
+  static let shared = WebViewRouter()
 
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
-    return true
+  enum RoutableView: String {
+    case entry
+    case webView
+    case result
   }
 
-  // deeplink
-  func application(_ application: UIApplication,
-                   open url: URL,
-                   options: [UIApplication.OpenURLOptionsKey : Any] = [:] ) -> Bool {
-    // Determine who sent the URL.
-        let sendingAppID = options[.sourceApplication]
-        print("source application = \(sendingAppID ?? "Unknown")")
+  func redirect(to view: String, with parameters: [String: String]) {
+    guard let routableView = RoutableView(rawValue: view) else { return }
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let resultView = storyboard.instantiateViewController(withIdentifier: String(describing: VerificationResultViewController.self))
-    showViewController(resultView)
 
-    return true
-  }
-
-  // MARK: UISceneSession Lifecycle
-
-  func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-    // Called when a new scene session is being created.
-    // Use this method to select a configuration to create the new scene with.
-    return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    switch routableView {
+    case .entry:
+      let viewController = storyboard.instantiateViewController(withIdentifier: String(describing: EntryViewController.self))
+      showViewController(viewController)
+    case .webView:
+      let invocationURL = parameters["url"]?.decodeURL()
+      guard let webViewController =  storyboard.instantiateViewController(withIdentifier: String(describing: WebViewVerificationViewController.self)) as? WebViewVerificationViewController else { return }
+      showViewController(webViewController)
+    case .result:
+      let isSuccessful = parameters.contains(where: { item in
+        item.key == "token"
+      })
+      guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: VerificationResultViewController.self)) as? VerificationResultViewController else { return }
+      vc.wasSuccessful = isSuccessful
+      showViewController(vc)
+    }
   }
 
   private func getKeyWindow() -> UIWindow? {
@@ -51,6 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     } else {
       keyWindow = firstActiveScene?.windows.first(where: \.isKeyWindow)
     }
+    self.keyWindow = keyWindow
     return keyWindow
   }
 
@@ -58,16 +63,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     DispatchQueue.main.async { [weak self] in
       let rootViewController = self?.getKeyWindow()?.rootViewController
       if let navigationController = rootViewController?.navigationController, navigationController.presentingViewController != nil {
+        self?.navigationController = navigationController
         navigationController.pushViewController(vc, animated: animated)
       } else {
         guard let rootNavigationController = rootViewController as? UINavigationController else {
           let navigationController = UINavigationController()
           navigationController.modalPresentationStyle = .fullScreen
           navigationController.navigationBar.isHidden = true
+          self?.navigationController = navigationController
           navigationController.viewControllers = [vc]
-         // self?.keyWindow?.rootViewController = navigationController
+          self?.keyWindow?.rootViewController = navigationController
           return
         }
+        self?.navigationController = rootNavigationController
         rootNavigationController.modalPresentationStyle = .fullScreen
         rootNavigationController.navigationBar.isHidden = true
         rootNavigationController.pushViewController(vc, animated: animated)
@@ -75,4 +83,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
   }
 }
-

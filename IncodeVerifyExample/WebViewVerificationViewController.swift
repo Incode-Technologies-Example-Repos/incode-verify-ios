@@ -20,15 +20,12 @@ class WebViewVerificationViewController: UIViewController {
     
     webView.navigationDelegate = self
     webView.uiDelegate = self
-    NotificationCenter.default.addObserver(self,
-                                           selector: #selector(handleUniversalLink),
-                                           name: .didReceiveUniversalLink,
-                                           object: nil)
     loadRequest()
+    addObservers()
   }
 
   func loadRequest() {
-    if let myURL = URL(string: Constants.verificationURL) {
+    if let myURL = URL(string: Constants.verificationURL.decodeURL()) {
       let myRequest = URLRequest(url: myURL)
       if myURL.checkParameterForValue(parameter: "enableWebViewInspection", value: "1") {
         if #available(iOS 16.4, *) {
@@ -66,7 +63,17 @@ class WebViewVerificationViewController: UIViewController {
         showAlert(title: "Error", message: "Flow completed with no redirect")
         return
       }
-
+      let host: String?
+      if #available(iOS 16.0, *) {
+        host = deepLink.host()
+      } else {
+        // Fallback on earlier versions
+        host = deepLink.host
+      }
+      if host?.contains("kijak.nl") ?? false {
+        WebViewRouter.shared.redirect(to: "result", with: parameters)
+        return
+      }
       if UIApplication.shared.canOpenURL(deepLink) {
         UIApplication.shared.open(deepLink)
       } else {
@@ -76,7 +83,7 @@ class WebViewVerificationViewController: UIViewController {
   }
 
   @objc private func handleUniversalLink() {
-    // read the data from UserDefaults and open the result screen
+    
   }
 }
 

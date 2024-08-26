@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KJC-df-T6i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KJC-df-T6i">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,18 +30,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="EntryViewController" customModule="IncodeVerifyExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Tu-rS-K82">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="639"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="631.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k1S-aP-Ow9">
-                                <rect key="frame" x="0.0" y="639" width="393" height="213"/>
+                                <rect key="frame" x="0.0" y="631.66666666666663" width="393" height="210.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mo6-BJ-uK6">
-                                        <rect key="frame" x="27" y="57.333333333333364" width="339" height="98.333333333333314"/>
+                                        <rect key="frame" x="27" y="55.999999999999993" width="339" height="98.333333333333314"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Started" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdK-T0-IgC">
                                                 <rect key="frame" x="0.0" y="0.0" width="339" height="32.333333333333336"/>
@@ -49,7 +50,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQV-ed-hok">
-                                                <rect key="frame" x="0.0" y="42.333333333333258" width="339" height="56"/>
+                                                <rect key="frame" x="0.0" y="42.333333333333371" width="339" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="Pol-gW-WPT"/>
                                                 </constraints>
@@ -57,6 +58,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Verify yourself">
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <segue destination="O3h-Jf-wAO" kind="show" id="dUT-96-BwZ"/>
@@ -98,23 +100,23 @@
             <objects>
                 <viewController id="O3h-Jf-wAO" customClass="VerifyMethodViewController" customModule="IncodeVerifyExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7dM-I7-m09">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification with Incode" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLc-1T-VGF">
-                                <rect key="frame" x="25" y="139" width="178.33333333333334" height="76.666666666666686"/>
+                                <rect key="frame" x="25" y="80" width="178.33333333333334" height="76.666666666666686"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify your identity and create your digital identity for future use!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBo-IG-WbZ">
-                                <rect key="frame" x="25" y="225.66666666666666" width="320.66666666666669" height="40.666666666666657"/>
+                                <rect key="frame" x="25" y="166.66666666666666" width="320.66666666666669" height="40.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fGr-9v-yHa">
-                                <rect key="frame" x="25" y="300.33333333333331" width="343" height="162"/>
+                                <rect key="frame" x="25" y="241.33333333333337" width="343" height="162"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fA9-8X-Vrd">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="40.666666666666664"/>
@@ -135,7 +137,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Otj-EM-CtK">
-                                        <rect key="frame" x="0.0" y="60.666666666666686" width="343" height="40.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="60.666666666666657" width="343" height="40.666666666666657"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verification_2" translatesAutoresizingMaskIntoConstraints="NO" id="AnH-5b-XOH">
                                                 <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -153,7 +155,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3TJ-pN-ei4">
-                                        <rect key="frame" x="0.0" y="121.33333333333339" width="343" height="40.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="121.33333333333336" width="343" height="40.666666666666671"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verification_3" translatesAutoresizingMaskIntoConstraints="NO" id="RdO-g8-d40">
                                                 <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -173,7 +175,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YwU-1R-cAg">
-                                <rect key="frame" x="25" y="680" width="343" height="122"/>
+                                <rect key="frame" x="25" y="670" width="343" height="122"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMH-rb-PT2">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="56"/>
@@ -184,6 +186,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Verify with App Clip">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="verifyWithAppClip" destination="O3h-Jf-wAO" eventType="touchUpInside" id="F6N-BF-ap8"/>
@@ -198,9 +201,10 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Verify with In App Web View">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="vKR-if-K0z" kind="show" id="9GR-Ih-vAn"/>
+                                            <action selector="verifyWithWebView:" destination="O3h-Jf-wAO" eventType="touchUpInside" id="X4R-eu-xYU"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -232,7 +236,7 @@
         <!--Verification Result View Controller-->
         <scene sceneID="1Vq-2h-W9J">
             <objects>
-                <viewController id="HGX-G3-6n7" customClass="VerificationResultViewController" customModule="IncodeVerifyExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VerificationResultViewController" id="HGX-G3-6n7" customClass="VerificationResultViewController" customModule="IncodeVerifyExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ap5-eY-BZm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -251,6 +255,19 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3i-eN-Bbc">
+                                <rect key="frame" x="25" y="699" width="343" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Return to start">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="B7M-50-DSZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="snj-o7-mll"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -259,6 +276,10 @@
                             <constraint firstItem="w5T-Ra-sbW" firstAttribute="centerX" secondItem="Ap5-eY-BZm" secondAttribute="centerX" id="OOj-BC-Jae"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="icon" destination="pZ9-8J-SPg" id="SMF-PG-v9R"/>
+                        <outlet property="resultMessageLabel" destination="gMB-Nj-Lyr" id="YiX-WD-VTq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80w-0H-hqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -267,15 +288,16 @@
         <!--Web View Verification View Controller-->
         <scene sceneID="iOD-gy-AAX">
             <objects>
-                <viewController id="vKR-if-K0z" customClass="WebViewVerificationViewController" customModule="IncodeVerifyExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebViewVerificationViewController" id="vKR-if-K0z" customClass="WebViewVerificationViewController" customModule="IncodeVerifyExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EQ7-Nc-8tF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5A6-cW-Ims">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration" allowsAirPlayForMediaPlayback="NO" allowsInlineMediaPlayback="YES" allowsPictureInPictureMediaPlayback="NO">
+                                    <dataDetectorTypes key="dataDetectorTypes"/>
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
@@ -300,6 +322,9 @@
             <point key="canvasLocation" x="1257" y="32"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="B7M-50-DSZ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="success" width="45" height="45"/>
         <image name="verification_1" width="24" height="24"/>

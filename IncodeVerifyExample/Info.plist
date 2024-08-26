@@ -11,7 +11,7 @@
 			<string>com.incode.IncodeVerifyExample</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>incodeVerifyExample</string>
+				<string>dididemo</string>
 			</array>
 		</dict>
 	</array>
@@ -34,5 +34,14 @@
 			</array>
 		</dict>
 	</dict>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>This app requires camera to function.</string>
 </dict>
 </plist>
