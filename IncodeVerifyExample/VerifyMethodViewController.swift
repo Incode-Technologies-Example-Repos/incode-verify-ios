@@ -28,7 +28,7 @@ class VerifyMethodViewController: UIViewController {
 
     if let url = url, UIApplication.shared.canOpenURL(url) {
       // universal link
-      UIApplication.shared.open(url)
+      UIApplication.shared.open(url,options: [:])
     } else {
       // show error
       print("can't open url: \(String(describing: url))")
