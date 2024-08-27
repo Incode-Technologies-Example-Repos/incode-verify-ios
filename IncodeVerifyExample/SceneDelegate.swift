@@ -16,9 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     // This is called when app is not already running.
     if let userActivity = connectionOptions.userActivities.first,
-       userActivity.activityType == NSUserActivityTypeBrowsingWeb {
+       userActivity.activityType == NSUserActivityTypeBrowsingWeb { //from universal link
       universalLinkURL = userActivity.webpageURL
       handleUniversalLink(universalLinkURL!, scene: scene)
+      return
     }
   }
 
@@ -48,21 +49,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
       UserDefaults.standard.setValue(parameters, forKey: "verificationResult")
       NotificationCenter.default.post(name: .didReceiveUniversalLink, object: nil)
-      redirectToResult(url: url, scene: scene)
+      WebViewRouter.shared.redirect(to: "result", with: parameters)
     }
-  }
-
-  func redirectToResult(url: URL, scene: UIScene) {
-    let isSuccessful = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems?.contains(where: { item in
-      item.name == "token"
-    })
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    guard let scene = (scene as? UIWindowScene) else { return }
-    guard let navController = scene.keyWindow?.rootViewController as? UINavigationController else {
-      return
-    }
-    let vc = storyboard.instantiateViewController(withIdentifier: String(describing: VerificationResultViewController.self)) as! VerificationResultViewController
-    vc.wasSuccessful = isSuccessful ?? false
-    navController.pushViewController(vc, animated: false)
   }
 }
