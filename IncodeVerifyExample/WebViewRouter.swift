@@ -37,9 +37,13 @@ class WebViewRouter {
       let isSuccessful = parameters.contains(where: { item in
         item.key == "token"
       })
-      guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: VerificationResultViewController.self)) as? VerificationResultViewController else { return }
-      vc.wasSuccessful = isSuccessful
-      showViewController(vc)
+      if isSuccessful {
+        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: VerificationResultViewController.self)) as? VerificationResultViewController else { return }
+        showViewController(vc)
+      } else {
+        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: VerificationTryAgainViewController.self)) as? VerificationTryAgainViewController else { return }
+        showViewController(vc)
+      }
     }
   }
 

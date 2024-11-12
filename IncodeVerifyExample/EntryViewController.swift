@@ -7,5 +7,13 @@
 
 import UIKit
 
-class EntryViewController: UIViewController { }
+class EntryViewController: UIViewController {
 
+  @IBOutlet weak var entryButton: AcmeButton!
+  @IBOutlet weak var bannerView: UIView!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+  }
+}

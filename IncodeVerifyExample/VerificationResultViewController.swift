@@ -8,18 +8,7 @@
 import UIKit
 
 class VerificationResultViewController: UIViewController {
-  
-  @IBOutlet weak var resultMessageLabel: UILabel!
-  @IBOutlet weak var icon: UIImageView!
-  var wasSuccessful = false
-
-  override func viewDidLoad() {
-    if !wasSuccessful {
-      setUnsuccessfulState()
-    }
-  }
-  func setUnsuccessfulState() {
-    icon.image = UIImage(named: "fail")
-    resultMessageLabel.text = "Verification was unsuccsessful"
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .lightContent
   }
 }

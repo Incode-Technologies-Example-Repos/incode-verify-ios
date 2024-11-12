@@ -1,15 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "User scan.pdf",
+      "filename" : "Screenshot 2024-06-25 at 2.37.20 PM 1.pdf",
       "idiom" : "universal"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "preserves-vector-representation" : true
   }
 }

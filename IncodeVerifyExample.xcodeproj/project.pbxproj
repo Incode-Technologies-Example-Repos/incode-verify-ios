@@ -22,6 +22,14 @@
 		2CFFA3A52C6B511700D9273D /* WebViewVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFA3A42C6B511700D9273D /* WebViewVerificationViewController.swift */; };
 		F53A64572C79034500ECD3BE /* String+SymbolEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53A64562C79034500ECD3BE /* String+SymbolEncoding.swift */; };
 		F53A64592C7CC25A00ECD3BE /* WebViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53A64582C7CC25A00ECD3BE /* WebViewRouter.swift */; };
+		F58434722CE3B842006BFC59 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F584346C2CE3B842006BFC59 /* DMSans-Regular.ttf */; };
+		F58434732CE3B842006BFC59 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F584346D2CE3B842006BFC59 /* DMSans-Medium.ttf */; };
+		F58434742CE3B842006BFC59 /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F584346E2CE3B842006BFC59 /* DMSans-Bold.ttf */; };
+		F58434752CE3B842006BFC59 /* DMSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F584346F2CE3B842006BFC59 /* DMSans-SemiBold.ttf */; };
+		F58434762CE3B842006BFC59 /* DMSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F58434702CE3B842006BFC59 /* DMSans-ExtraBold.ttf */; };
+		F58434772CE3B842006BFC59 /* DMSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F58434712CE3B842006BFC59 /* DMSans-Black.ttf */; };
+		F58434812CE3C6F5006BFC59 /* AcmeButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58434802CE3C6F5006BFC59 /* AcmeButtons.swift */; };
+		F58434832CE3FA14006BFC59 /* VerificationTryAgainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58434822CE3FA14006BFC59 /* VerificationTryAgainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +51,14 @@
 		2CFFA3A42C6B511700D9273D /* WebViewVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVerificationViewController.swift; sourceTree = "<group>"; };
 		F53A64562C79034500ECD3BE /* String+SymbolEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SymbolEncoding.swift"; sourceTree = "<group>"; };
 		F53A64582C7CC25A00ECD3BE /* WebViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewRouter.swift; sourceTree = "<group>"; };
+		F584346C2CE3B842006BFC59 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
+		F584346D2CE3B842006BFC59 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		F584346E2CE3B842006BFC59 /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		F584346F2CE3B842006BFC59 /* DMSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		F58434702CE3B842006BFC59 /* DMSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		F58434712CE3B842006BFC59 /* DMSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Black.ttf"; sourceTree = "<group>"; };
+		F58434802CE3C6F5006BFC59 /* AcmeButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcmeButtons.swift; sourceTree = "<group>"; };
+		F58434822CE3FA14006BFC59 /* VerificationTryAgainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationTryAgainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +91,7 @@
 		2C3657FB2C62197B0096F7F1 /* IncodeVerifyExample */ = {
 			isa = PBXGroup;
 			children = (
+				F58434692CE3B802006BFC59 /* Resources */,
 				2CE101662C7366E200E45E92 /* Extensions */,
 				2CE101652C73557E00E45E92 /* IncodeVerifyExample.entitlements */,
 				2C3657FC2C62197B0096F7F1 /* AppDelegate.swift */,
@@ -89,6 +106,8 @@
 				2C36580A2C62197D0096F7F1 /* Info.plist */,
 				2CFFA3A22C6A392A00D9273D /* Constants.swift */,
 				F53A64582C7CC25A00ECD3BE /* WebViewRouter.swift */,
+				F58434802CE3C6F5006BFC59 /* AcmeButtons.swift */,
+				F58434822CE3FA14006BFC59 /* VerificationTryAgainViewController.swift */,
 			);
 			path = IncodeVerifyExample;
 			sourceTree = "<group>";
@@ -102,6 +121,35 @@
 				F53A64562C79034500ECD3BE /* String+SymbolEncoding.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F58434692CE3B802006BFC59 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F584346A2CE3B80F006BFC59 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F584346A2CE3B80F006BFC59 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F584346B2CE3B842006BFC59 /* DmSans */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F584346B2CE3B842006BFC59 /* DmSans */ = {
+			isa = PBXGroup;
+			children = (
+				F584346C2CE3B842006BFC59 /* DMSans-Regular.ttf */,
+				F584346D2CE3B842006BFC59 /* DMSans-Medium.ttf */,
+				F584346E2CE3B842006BFC59 /* DMSans-Bold.ttf */,
+				F584346F2CE3B842006BFC59 /* DMSans-SemiBold.ttf */,
+				F58434702CE3B842006BFC59 /* DMSans-ExtraBold.ttf */,
+				F58434712CE3B842006BFC59 /* DMSans-Black.ttf */,
+			);
+			path = DmSans;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,9 +210,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58434762CE3B842006BFC59 /* DMSans-ExtraBold.ttf in Resources */,
+				F58434732CE3B842006BFC59 /* DMSans-Medium.ttf in Resources */,
+				F58434752CE3B842006BFC59 /* DMSans-SemiBold.ttf in Resources */,
+				F58434742CE3B842006BFC59 /* DMSans-Bold.ttf in Resources */,
 				2C3658062C62197D0096F7F1 /* Assets.xcassets in Resources */,
 				2C3658092C62197D0096F7F1 /* Base in Resources */,
 				2C3658042C62197B0096F7F1 /* Base in Resources */,
+				F58434772CE3B842006BFC59 /* DMSans-Black.ttf in Resources */,
+				F58434722CE3B842006BFC59 /* DMSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58434812CE3C6F5006BFC59 /* AcmeButtons.swift in Sources */,
 				F53A64592C7CC25A00ECD3BE /* WebViewRouter.swift in Sources */,
 				2CE1016E2C736EA000E45E92 /* VerificationResultViewController.swift in Sources */,
 				F53A64572C79034500ECD3BE /* String+SymbolEncoding.swift in Sources */,
@@ -186,6 +241,7 @@
 				2C3657FF2C62197B0096F7F1 /* SceneDelegate.swift in Sources */,
 				2CFFA3A12C6A375E00D9273D /* VerifyMethodViewController.swift in Sources */,
 				2CFFA3A32C6A392A00D9273D /* Constants.swift in Sources */,
+				F58434832CE3FA14006BFC59 /* VerificationTryAgainViewController.swift in Sources */,
 				2CE101682C73670E00E45E92 /* Notification+CustomNotifications.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,18 +392,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = IncodeVerifyExample/IncodeVerifyExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9LHQ7BSA22;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IncodeVerifyExample/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "IncodeVerify Example";
+				INFOPLIST_KEY_CFBundleDisplayName = "IncodeVerify Acme Example";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera to function.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -355,6 +413,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.incode.IncodeVerifyExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -366,18 +428,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = IncodeVerifyExample/IncodeVerifyExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9LHQ7BSA22;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IncodeVerifyExample/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "IncodeVerify Example";
+				INFOPLIST_KEY_CFBundleDisplayName = "IncodeVerify Acme Example";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera to function.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -385,6 +449,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.incode.IncodeVerifyExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
