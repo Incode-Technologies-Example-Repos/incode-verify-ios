@@ -396,7 +396,7 @@
 				CODE_SIGN_ENTITLEMENTS = IncodeVerifyExample/IncodeVerifyExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9LHQ7BSA22;
+				DEVELOPMENT_TEAM = RKM7A89MJW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IncodeVerifyExample/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "IncodeVerify Acme Example";
@@ -406,12 +406,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.incode.IncodeVerifyExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.incode.IncodeAcmeExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -432,7 +433,7 @@
 				CODE_SIGN_ENTITLEMENTS = IncodeVerifyExample/IncodeVerifyExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9LHQ7BSA22;
+				DEVELOPMENT_TEAM = RKM7A89MJW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IncodeVerifyExample/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "IncodeVerify Acme Example";
@@ -442,12 +443,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.incode.IncodeVerifyExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.incode.IncodeAcmeExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

@@ -4,7 +4,6 @@
 <dict>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:app.incode.com</string>
 		<string>applinks:kijak.nl</string>
 	</array>
 </dict>
