@@ -51,34 +51,7 @@ class WebViewVerificationViewController: UIViewController {
       URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems?.forEach({
         parameters[$0.name] = $0.value
       })
-
-      var queryItems: [URLQueryItem] = []
-      if parameters["error"] != nil { queryItems.append(URLQueryItem(name: "error", value: parameters["error"])) }
-      if parameters["token"] != nil { queryItems.append(URLQueryItem(name: "token", value: parameters["token"])) }
-      if parameters["correlation_id"] != nil { queryItems.append(URLQueryItem(name: "correlation_id", value: parameters["correlation_id"])) }
-
-      guard let redirectURL = parameters["redirect_url"],
-            let decodedRedirectURL = URL(string: redirectURL.decodeURL()),
-            let deepLink = decodedRedirectURL.appendQueryParams(queryItems: queryItems) else {
-        showAlert(title: "Error", message: "Flow completed with no redirect")
-        return
-      }
-      let host: String?
-      if #available(iOS 16.0, *) {
-        host = deepLink.host()
-      } else {
-        // Fallback on earlier versions
-        host = deepLink.host
-      }
-      if host?.contains("kijak.nl") ?? false {
-        WebViewRouter.shared.redirect(to: "result", with: parameters)
-        return
-      }
-      if UIApplication.shared.canOpenURL(deepLink) {
-        UIApplication.shared.open(deepLink)
-      } else {
-        showAlert(title: "Error", message: "Invalid redirect")
-      }
+      WebViewRouter.shared.redirect(to: "result", with: parameters)
     }
   }
 
