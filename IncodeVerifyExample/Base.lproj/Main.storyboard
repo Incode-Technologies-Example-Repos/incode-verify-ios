@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KJC-df-T6i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KJC-df-T6i">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -104,18 +104,18 @@
                                 <rect key="frame" x="40" y="286" width="313" height="164"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6bX-uz-juw">
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6bX-uz-juw">
                                         <rect key="frame" x="0.0" y="0.0" width="313" height="44"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verification_1" translatesAutoresizingMaskIntoConstraints="NO" id="1Cs-9F-u9S">
-                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                <rect key="frame" x="0.0" y="10" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="dGM-UZ-y4S"/>
                                                     <constraint firstAttribute="width" constant="24" id="vSS-jf-Ty3"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You'll need a valid government-issued ID and a selfie" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Feh-MS-447">
-                                                <rect key="frame" x="32" y="0.0" width="281" height="36.666666666666664"/>
+                                                <rect key="frame" x="32" y="3.6666666666666679" width="281" height="36.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -183,14 +183,27 @@
             <objects>
                 <viewController id="O3h-Jf-wAO" customClass="VerifyMethodViewController" customModule="IncodeVerifyExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7dM-I7-m09">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="YwU-1R-cAg">
-                                <rect key="frame" x="25" y="706" width="343" height="56"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="YwU-1R-cAg">
+                                <rect key="frame" x="25" y="586" width="343" height="206"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RrQ-Lf-KKf" customClass="AcmeSecondaryButton" customModule="IncodeVerifyExample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="Ah5-AE-WBJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Safari ViewController"/>
+                                        <connections>
+                                            <action selector="verifyWithSafari:" destination="O3h-Jf-wAO" eventType="touchUpInside" id="Okb-Dl-fv0"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2b-wJ-11k" customClass="AcmeSecondaryButton" customModule="IncodeVerifyExample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="162" height="56"/>
+                                        <rect key="frame" x="0.0" y="75" width="343" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="mtf-LZ-t6u"/>
                                         </constraints>
@@ -203,7 +216,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMH-rb-PT2" customClass="AcmeButton" customModule="IncodeVerifyExample" customModuleProvider="target">
-                                        <rect key="frame" x="181" y="0.0" width="162" height="56"/>
+                                        <rect key="frame" x="0.0" y="150" width="343" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="fYV-RG-K6B"/>
                                         </constraints>
@@ -218,7 +231,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eqi-gh-boh">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="260"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="263"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="PW9-5x-E9u">
@@ -226,14 +239,14 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Acme verification with Incode" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeY-qE-KBe">
-                                        <rect key="frame" x="25" y="95" width="299" height="72"/>
+                                        <rect key="frame" x="25" y="95" width="299" height="73"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Verify your identity and create your digital identity for future use!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="De4-Cp-poU">
-                                        <rect key="frame" x="25" y="178" width="299" height="56"/>
+                                        <rect key="frame" x="25" y="178" width="299" height="58"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -243,21 +256,24 @@
                                 <color key="backgroundColor" red="0.52156862749999999" green="0.19215686269999999" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" id="Z5m-2k-fu6">
-                                <rect key="frame" x="40" y="286" width="313" height="155"/>
+                                <rect key="frame" x="40" y="286" width="313" height="164"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tak-gK-NxF">
-                                        <rect key="frame" x="0.0" y="0.0" width="313" height="41"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tak-gK-NxF">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="44"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verification_1" translatesAutoresizingMaskIntoConstraints="NO" id="fSv-3F-IPC">
-                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                <rect key="frame" x="0.0" y="10" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="24" id="Jm8-wP-CuX"/>
                                                     <constraint firstAttribute="height" constant="24" id="exc-rd-eTE"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You'll need a valid government-issued ID and a selfie" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38q-sQ-1bV">
-                                                <rect key="frame" x="32" y="0.0" width="281" height="36.666666666666664"/>
+                                                <rect key="frame" x="32" y="3.6666666666666679" width="281" height="36.666666666666657"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="281" id="bMb-WA-I0y"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -265,7 +281,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xUQ-nP-hj0">
-                                        <rect key="frame" x="0.0" y="57" width="313" height="41"/>
+                                        <rect key="frame" x="0.0" y="60" width="313" height="44"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verification_2" translatesAutoresizingMaskIntoConstraints="NO" id="gtm-Bo-eAp">
                                                 <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -283,7 +299,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UEg-AC-7v2">
-                                        <rect key="frame" x="0.0" y="114" width="313" height="41"/>
+                                        <rect key="frame" x="0.0" y="120" width="313" height="44"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verification_3" translatesAutoresizingMaskIntoConstraints="NO" id="tj4-Os-LPR">
                                                 <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -303,19 +319,19 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Verify with Incode" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZU-aD-07h">
-                                <rect key="frame" x="114" y="595" width="171" height="21"/>
+                                <rect key="frame" x="114" y="476" width="171" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="16"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OvL-wG-5Ba">
-                                <rect key="frame" x="25" y="605" width="81" height="1"/>
+                                <rect key="frame" x="25" y="486" width="81" height="1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p7G-Kf-7Fr">
-                                <rect key="frame" x="287" y="605" width="81" height="1"/>
+                                <rect key="frame" x="287" y="486" width="81" height="1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                             </view>
@@ -323,7 +339,7 @@
                         <viewLayoutGuide key="safeArea" id="s1k-HV-mTJ"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="YwU-1R-cAg" secondAttribute="bottom" constant="80" id="C8B-pu-TVY"/>
+                            <constraint firstAttribute="bottom" secondItem="YwU-1R-cAg" secondAttribute="bottom" constant="60" id="C8B-pu-TVY"/>
                             <constraint firstItem="s1k-HV-mTJ" firstAttribute="trailing" secondItem="YwU-1R-cAg" secondAttribute="trailing" constant="25" id="Mkg-Co-yU0"/>
                             <constraint firstItem="YwU-1R-cAg" firstAttribute="leading" secondItem="s1k-HV-mTJ" secondAttribute="leading" constant="25" id="uMa-e5-1ME"/>
                         </constraints>
@@ -396,7 +412,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5A6-cW-Ims">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <wkWebViewConfiguration key="configuration" allowsAirPlayForMediaPlayback="NO" allowsInlineMediaPlayback="YES" allowsPictureInPictureMediaPlayback="NO">
                                     <dataDetectorTypes key="dataDetectorTypes" none="YES"/>
@@ -567,7 +583,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="79a-dX-6Xi"/>
+        <segue reference="dUT-96-BwZ"/>
         <segue reference="0pG-4W-8Dt"/>
     </inferredMetricsTieBreakers>
     <resources>

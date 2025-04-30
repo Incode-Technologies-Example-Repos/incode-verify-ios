@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class VerifyMethodViewController: UIViewController {
   
@@ -38,5 +39,13 @@ class VerifyMethodViewController: UIViewController {
   @IBAction func verifyWithWebView(_ sender: Any) {
     WebViewRouter.shared.redirect(to: "webView", with: [:])
   }
-
+  @IBAction func verifyWithSafari(_ sender: Any) {
+    guard let url = URL(string: "https://demo.incode.id/?client_id=AcmeSample&origin=native") else { return }
+    let config = SFSafariViewController.Configuration()
+    config.barCollapsingEnabled = true
+    let vc = SFSafariViewController(url: url, configuration: config)
+    vc.preferredControlTintColor = UIColor(red: 133.0/255.0, green: 49.0/255.0, blue: 239.0/255.0, alpha: 1.0)
+    self.present(vc, animated: true)
+  }
+  
 }
