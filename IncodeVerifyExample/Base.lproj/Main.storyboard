@@ -183,11 +183,11 @@
             <objects>
                 <viewController id="O3h-Jf-wAO" customClass="VerifyMethodViewController" customModule="IncodeVerifyExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7dM-I7-m09">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="YwU-1R-cAg">
-                                <rect key="frame" x="25" y="586" width="343" height="206"/>
+                                <rect key="frame" x="25" y="517" width="343" height="206"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RrQ-Lf-KKf" customClass="AcmeSecondaryButton" customModule="IncodeVerifyExample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="56"/>
@@ -231,22 +231,22 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eqi-gh-boh">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="263"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="242"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="PW9-5x-E9u">
-                                        <rect key="frame" x="25" y="56" width="115" height="27"/>
+                                        <rect key="frame" x="25" y="56" width="115" height="25"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Acme verification with Incode" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeY-qE-KBe">
-                                        <rect key="frame" x="25" y="95" width="299" height="73"/>
+                                        <rect key="frame" x="25" y="95" width="299" height="64"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Verify your identity and create your digital identity for future use!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="De4-Cp-poU">
-                                        <rect key="frame" x="25" y="178" width="299" height="58"/>
+                                        <rect key="frame" x="25" y="178" width="299" height="44"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -256,21 +256,21 @@
                                 <color key="backgroundColor" red="0.52156862749999999" green="0.19215686269999999" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" id="Z5m-2k-fu6">
-                                <rect key="frame" x="40" y="286" width="313" height="164"/>
+                                <rect key="frame" x="40" y="286" width="313" height="126"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tak-gK-NxF">
-                                        <rect key="frame" x="0.0" y="0.0" width="313" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="37.333333333333336"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verification_1" translatesAutoresizingMaskIntoConstraints="NO" id="fSv-3F-IPC">
-                                                <rect key="frame" x="0.0" y="10" width="24" height="24"/>
+                                                <rect key="frame" x="0.0" y="6.6666666666666679" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="24" id="Jm8-wP-CuX"/>
                                                     <constraint firstAttribute="height" constant="24" id="exc-rd-eTE"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You'll need a valid government-issued ID and a selfie" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38q-sQ-1bV">
-                                                <rect key="frame" x="32" y="3.6666666666666679" width="281" height="36.666666666666657"/>
+                                                <rect key="frame" x="32" y="0.33333333333333215" width="281" height="36.666666666666671"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="281" id="bMb-WA-I0y"/>
                                                 </constraints>
@@ -281,7 +281,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xUQ-nP-hj0">
-                                        <rect key="frame" x="0.0" y="60" width="313" height="44"/>
+                                        <rect key="frame" x="0.0" y="53.333333333333329" width="313" height="37.333333333333329"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verification_2" translatesAutoresizingMaskIntoConstraints="NO" id="gtm-Bo-eAp">
                                                 <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -299,7 +299,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UEg-AC-7v2">
-                                        <rect key="frame" x="0.0" y="120" width="313" height="44"/>
+                                        <rect key="frame" x="0.0" y="106.66666666666667" width="313" height="37.333333333333329"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verification_3" translatesAutoresizingMaskIntoConstraints="NO" id="tj4-Os-LPR">
                                                 <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -572,10 +572,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Qau-Vg-0qw"/>
-                    <connections>
-                        <outlet property="bannerView" destination="4CS-tv-F2Q" id="Luj-ur-x1P"/>
-                        <outlet property="entryButton" destination="Uf3-vl-Qzl" id="8PW-Bl-OEQ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVv-CK-Ctf" sceneMemberID="firstResponder"/>
             </objects>
@@ -583,7 +579,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dUT-96-BwZ"/>
+        <segue reference="79a-dX-6Xi"/>
         <segue reference="0pG-4W-8Dt"/>
     </inferredMetricsTieBreakers>
     <resources>
