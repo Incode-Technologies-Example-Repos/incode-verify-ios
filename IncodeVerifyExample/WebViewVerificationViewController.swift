@@ -13,7 +13,7 @@ class WebViewVerificationViewController: UIViewController {
   @IBOutlet weak private var webView: WKWebView!
 
   private var webViewURLObserver: NSKeyValueObservation?
-  private let validUrls = ["incode.id", "incode.com", "incodesmile.com", "incodetest.com"]
+  private let validUrls = ["incode.id", "incode.com", "incodesmile.com", "incodetest.com", "incode.id.natasa.ngrok.io"]
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -25,7 +25,7 @@ class WebViewVerificationViewController: UIViewController {
   }
 
   func loadRequest() {
-    if let myURL = URL(string: Constants.verificationURL.decodeURL()) {
+    if let myURL = URL(string: "https://incode.id.natasa.ngrok.io/?client_id=tiktok259") {
       let myRequest = URLRequest(url: myURL)
       if myURL.checkParameterForValue(parameter: "enableWebViewInspection", value: "1") {
         if #available(iOS 16.4, *) {
@@ -67,6 +67,16 @@ extension WebViewVerificationViewController: WKUIDelegate, WKNavigationDelegate 
   }
 
   func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+    if let url = navigationAction.request.url {
+      if url.absoluteString.hasPrefix("https://www.tiktok.com") {
+        if navigationAction.targetFrame == nil || !navigationAction.targetFrame!.isMainFrame {
+          UIApplication.shared.open(url)
+          decisionHandler(.cancel)
+          return
+        }
+      }
+    }
+
     var host = navigationAction.request.url?.host
     host = (host == nil) ? navigationAction.request.mainDocumentURL?.host : host  // permit web app requests
     if let requestHost = host {

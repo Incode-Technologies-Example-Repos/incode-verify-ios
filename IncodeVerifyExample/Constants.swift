@@ -8,7 +8,7 @@
 import Foundation
 
 final class Constants {
-  static let clientId = "AcmeSample"
+  static let clientId = "verify_tiktok833"
   static let redirectURL = "https%3A%2F%2Fkijak.nl/verificationResult/"
   // static let correlationId = "123"
   static let environment = "demo.incode.id"
