@@ -12,8 +12,8 @@ class WebViewVerificationViewController: UIViewController {
   
   @IBOutlet weak private var webView: WKWebView!
 
+  var invocationURL: String?
   private var webViewURLObserver: NSKeyValueObservation?
-  private let validUrls = ["incode.id", "incode.com", "incodesmile.com", "incodetest.com", "incode.id.natasa.ngrok.io"]
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -25,15 +25,14 @@ class WebViewVerificationViewController: UIViewController {
   }
 
   func loadRequest() {
-    if let myURL = URL(string: "https://incode.id.natasa.ngrok.io/?client_id=tiktok259") {
-      let myRequest = URLRequest(url: myURL)
-      if myURL.checkParameterForValue(parameter: "enableWebViewInspection", value: "1") {
-        if #available(iOS 16.4, *) {
-          webView.isInspectable = true
-        }
+    guard let myURL = URL(string: invocationURL?.decodeURL() ?? "") ?? URL(string: Constants.verificationURL.decodeURL()) else { return }
+    let myRequest = URLRequest(url: myURL)
+    if myURL.checkParameterForValue(parameter: "enableWebViewInspection", value: "1") {
+      if #available(iOS 16.4, *) {
+        webView.isInspectable = true
       }
-      webView.load(myRequest)
     }
+    webView.load(myRequest)
   }
 
   func addObservers() {
@@ -67,26 +66,12 @@ extension WebViewVerificationViewController: WKUIDelegate, WKNavigationDelegate 
   }
 
   func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-    if let url = navigationAction.request.url {
-      if url.absoluteString.hasPrefix("https://www.tiktok.com") {
-        if navigationAction.targetFrame == nil || !navigationAction.targetFrame!.isMainFrame {
-          UIApplication.shared.open(url)
-          decisionHandler(.cancel)
-          return
-        }
-      }
-    }
-
     var host = navigationAction.request.url?.host
     host = (host == nil) ? navigationAction.request.mainDocumentURL?.host : host  // permit web app requests
     if let requestHost = host {
-      if validUrls.first(where: { requestHost.hasSuffix($0) }) != nil { // allows *.incode.com etc
-          decisionHandler(.allow)
-          return
-      }
+      decisionHandler(.allow)
+      return
     }
-
-    decisionHandler(.cancel)
   }
 
   @available(iOS 15.0, *)

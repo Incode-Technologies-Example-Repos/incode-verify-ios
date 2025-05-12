@@ -32,6 +32,7 @@ class WebViewRouter {
     case .webView:
       let invocationURL = parameters["url"]?.decodeURL()
       guard let webViewController =  storyboard.instantiateViewController(withIdentifier: String(describing: WebViewVerificationViewController.self)) as? WebViewVerificationViewController else { return }
+      webViewController.invocationURL = invocationURL
       showViewController(webViewController)
     case .result:
       let isSuccessful = parameters.contains(where: { item in

@@ -9,14 +9,30 @@ import UIKit
 import SafariServices
 
 class VerifyMethodViewController: UIViewController {
-  
+
+  @IBOutlet weak var urlTextField: UITextField!
+
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // Do any additional setup after loading the view.
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(keyboardWillShow),
+                                           name: UIResponder.keyboardWillShowNotification,
+                                           object: nil)
+
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(keyboardWillHide),
+                                           name: UIResponder.keyboardWillHideNotification,
+                                           object: nil)
+
+    let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+    view.addGestureRecognizer(tap)
   }
-  
-  
+
+  deinit {
+      NotificationCenter.default.removeObserver(self)
+  }
+
   // MARK: - Actions
   @IBAction func verifyWithAppClip() {
     var url: URL? = nil
@@ -37,8 +53,9 @@ class VerifyMethodViewController: UIViewController {
   }
 
   @IBAction func verifyWithWebView(_ sender: Any) {
-    WebViewRouter.shared.redirect(to: "webView", with: [:])
+    WebViewRouter.shared.redirect(to: "webView", with: ["url":urlTextField.text ?? ""])
   }
+
   @IBAction func verifyWithSafari(_ sender: Any) {
     guard let url = URL(string: "https://demo.incode.id/?client_id=AcmeSample&origin=native") else { return }
     let config = SFSafariViewController.Configuration()
@@ -47,5 +64,43 @@ class VerifyMethodViewController: UIViewController {
     vc.preferredControlTintColor = UIColor(red: 133.0/255.0, green: 49.0/255.0, blue: 239.0/255.0, alpha: 1.0)
     self.present(vc, animated: true)
   }
-  
+
+  @objc func keyboardWillShow(notification: NSNotification) {
+    guard let userInfo = notification.userInfo,
+          let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
+      return
+    }
+
+    // Pomeri view ako već nije pomeren
+    if self.view.frame.origin.y == 0 {
+      UIView.animate(withDuration: 0.3) {
+        self.view.frame.origin.y -= keyboardFrame.height / 2
+      }
+    }
+  }
+
+  @objc func keyboardWillHide(notification: NSNotification) {
+    // Vrati view nazad
+    if self.view.frame.origin.y != 0 {
+      UIView.animate(withDuration: 0.3) {
+        self.view.frame.origin.y = 0
+      }
+    }
+  }
+
+  @objc func dismissKeyboard() {
+      view.endEditing(true)
+  }
 }
+
+extension VerifyMethodViewController: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return true
+  }
+
+  func textFieldDidEndEditing(_ textField: UITextField) {
+    print(textField.text ?? "")
+  }
+}
+
