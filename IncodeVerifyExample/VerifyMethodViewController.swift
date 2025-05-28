@@ -40,7 +40,7 @@ class VerifyMethodViewController: UIViewController {
     WebViewRouter.shared.redirect(to: "webView", with: [:])
   }
   @IBAction func verifyWithSafari(_ sender: Any) {
-    guard let url = URL(string: "https://demo.incode.id/?client_id=AcmeSample&origin=native") else { return }
+    guard let url = URL(string: Constants.verificationNoRedirectURL) else { return }
     let config = SFSafariViewController.Configuration()
     config.barCollapsingEnabled = true
     let vc = SFSafariViewController(url: url, configuration: config)
