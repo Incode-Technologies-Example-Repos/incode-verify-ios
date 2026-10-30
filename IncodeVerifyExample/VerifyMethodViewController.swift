@@ -25,7 +25,6 @@ class VerifyMethodViewController: UIViewController {
     } else {
       url = URL(string: "https://app.incode.com/?url=\(Constants.verificationURL.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!.percentageEncodeQuery())")!
     }
-    //let hardcodeurl = URL(string: "https://app.incode.com/?url=https%253A%252F%252Fincode-id-5bdz1clk.stage.incodetest.com%252F%253Fclient_id%253Dincodeid_product338%2526redirect_url%253Dhttps%253A%252F%252Fkijak.nl/verificationResult/%2526correlation_id%253D123%2526origin%253Dnative")!
 
     if let url = url, UIApplication.shared.canOpenURL(url) {
       // universal link
